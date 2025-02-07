@@ -1,0 +1,25 @@
+History of Commands used for WS2:
+
+
+   90  cd CS131
+   91  ls
+   92  mkdir ws2
+   93  cd ws2
+   95  pwd > ws2.txt 
+   98  id >> ws2.txt 
+  100  ls /proc/ | grep mem >> ws2.txt 
+  101  ls /proc/ | grep cpu >> ws2.txt 
+  104  head /proc/meminfo >> ws2.txt 
+  105  head /proc/cpuinfo >> ws2.txt 
+  106  tail /proc/cpuinfo >> ws2.txt 
+  107  cat /proc/cpuinfo >> ws2.txt 
+  108  ls /etc/ | grep release >> ws2.txt
+  109  cat /etc/os-release >> ws2.txt
+  118  vim ws2.txt
+  119  cat ws2.txt 
+  120  history > cmds.log
+  121  vim cmds.log
+  122  cat cmds.log
+
+
+---------- END ----------

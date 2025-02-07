@@ -1,0 +1,130 @@
+WS2 Outputs: 
+
+1)Home Directory Path. Command used - 'pwd'
+/home/ramakrishna_pudota/CS131/ws2
+
+2) Information about UID and the groups I belong to. Command used - 'id'
+uid=1001(ramakrishna_pudota) gid=1002(ramakrishna_pudota) groups=1002(ramakrishna_pudota),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),118(netdev),119(lxd),1000(ubuntu),1001(google-sudoers)
+
+3) Found files that contain information about memory(mem). Command used - 'ls /proc/ | grep mem'. 'meminfo' file contains the information about memory on the server.
+iomem
+meminfo
+
+4) Found files that contain information about cpu. Command used - 'ls /proc/ | grep cpu'. 'cpuinfo' file contains the information about cpu's on the server.
+cpuinfo
+
+5) Used head to check the memory information file (meminfo). Command used - 'head /proc/meminfo'. Total Memory - 976904 kB. 
+MemTotal:         976904 kB
+MemFree:          408164 kB
+MemAvailable:     644668 kB
+Buffers:           15992 kB
+Cached:           340528 kB
+SwapCached:            0 kB
+Active:           109904 kB
+Inactive:         305376 kB
+Active(anon):        892 kB
+Inactive(anon):    67024 kB
+
+6) Used head to check the cpu information file (cpuinfo). Command used - 'head /proc/cpuinfo'. 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+cpuid level	: 13
+
+7) Used tail to check the cpu information file (cpuinfo). Command used - 'tail /proc/cpuinfo'.
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+8) Used cat to check the cpu information file (cpuinfo). Command used - 'cat /proc/cpuinfo'. 
+Number of Processors on the server: 2. 
+Processor architecture name: Intel(R) Xeon(R) CPU @ 2.20GHz. 
+Processor Speed: 2.20GHz.
+
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+9) 'os-release' is the file that contains the os version information. Command used - 'ls /etc/ | grep release'
+lsb-release
+os-release
+
+10) OS System Version Information. Command used - 'cat /etc/os-release'. OS System Version: Ubuntu 20.04.6 LTS.
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+
+------------- END ------------- 
