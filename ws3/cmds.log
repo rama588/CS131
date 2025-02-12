@@ -1,0 +1,21 @@
+Commands Used for WS3:
+
+
+  126  sudo apt install python3-pip
+  127  pip install gdown
+  128  /home/ramakrishna_pudota/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  137  grep '^[^,]*,"2019-01-02 ' 2019-01-h1.csv > jan2_data.csv
+  139  head -5 jan2_data.csv > ws3.txt
+  141  wc -l jan2_data.csv >> ws3.txt 
+  147  cut -d ',' -f8 jan2_data.csv | sort | uniq -c | sort -nr | head -3 >> ws3.txt 
+  148  cat ws3.txt 
+  149  grep '^[^,]*,"2019-01-10 ' 2019-01-h1.csv > jan10_data.csv
+  151  wc -l jan10_data.csv >> ws3.txt 
+  153  head -5 jan10_data.csv >> ws3.txt
+  157  cut -d ',' -f8 jan10_data.csv | sort | uniq -c | sort -nr | head -3 >> ws3.txt 
+  158  cat ws3.txt 
+  159  vim ws3.txt 
+  160  history > cmds.log
+
+
+------------ END ------------
