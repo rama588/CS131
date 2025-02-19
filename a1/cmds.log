@@ -1,0 +1,47 @@
+ Commands used for Assignment 1:
+
+
+  333  cd CS131/
+  335  mkdir a1
+  349  vim ~/.bashrc      #Tasks 1a and 1b
+  350  source ~/.bashrc   #Tasks 1a and 1b
+  353  l                  #Task 1a
+  354  l > a1/a1.txt      #Task 1a
+  359  w                  #Task 1b
+  360  w >> a1/a1.txt     #Task 1b
+  366  ls
+  367  cd a1/
+  369  mkdir FARE         #Task 2a
+  373  cd ..
+  378  cut -d ',' -f 8,9,11 2019-01-h1.csv | grep '^1.0,264.0,' | cut -d ',' -f 3 > a1/FARE/1.0-264.0.txt         #Task 2b
+  379  cat a1/FARE/1.0-264.0.txt
+  380  cut -d ',' -f 8,9,11 2019-01-h1.csv | grep '^10.0,114.0,' | cut -d ',' -f 3 > a1/FARE/10.0-114.0.txt       #Task 2b
+  381  cat a1/FARE/10.0-114.0.txt 
+  393  sum=$(paste -sd+ a1/FARE/1.0-264.0.txt | bc)             #Task 2c
+  394  count=$(wc -l < a1/FARE/1.0-264.0.txt)                   #Task 2c
+  395  echo "scale=2; $sum/$count" | bc | tee -a a1/a1.txt      #Task 2c
+  396  cat a1/a1.txt 
+  397  sum=$(paste -sd+ a1/FARE/10.0-114.0.txt | bc)            #Task 2c
+  398  count=$(wc -l < a1/FARE/10.0-114.0.txt)                  #Task 2c
+  399  echo "scale=2; $sum/$count" | bc | tee -a a1/a1.txt      #Task 2c
+  400  cat a1/a1.txt 
+  403  cut -d ',' -f 2,17 2019-01-h1.csv | grep '^"2019-01-10 ' | cut -d ',' -f 2 | sort -nr | head -1 | tee -a a1/a1.txt       #Task 2d
+  406  cat a1/a1.txt
+  407  cut -d ',' -f 4 2019-01-h1.csv | tail -n +2 | sort -nr | head -1     
+  408  cut -d ',' -f 4,9 2019-01-h1.csv | grep '^[3-9]\.' | cut -d ',' -f 2 | sort | uniq -c | sort -nr | head -10                        
+  409  cut -d ',' -f 4,9 2019-01-h1.csv | grep '^[3-9]\.' | cut -d ',' -f 2 | sort | uniq -c | sort -nr | head -10 | tee -a a1/a1.txt      #Task 2e
+  410  cat a1/a1.txt 
+  411  ls
+  412  cd a1
+  413  ls
+  414  cd FARE/
+  415  ls
+  417  cd ..
+  418  ls
+  419  vim a1.txt
+  420  cat a1.txt 
+  421  history > cmds.log
+
+
+
+------------ END ------------

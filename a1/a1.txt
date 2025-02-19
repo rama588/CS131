@@ -1,0 +1,74 @@
+
+#ASSIGNMENT 1#
+
+RAMA KRISHNA PUDOTA | 018222152
+
+
+Task 1a) Alias 'l' used in CS131 directory for listing files in a list format and reverse chronologically ordered as a short name. 
+
+Output:
+
+total 20
+-rw-rw-r-- 1 ramakrishna_pudota ramakrishna_pudota   17 Feb 10 19:17 README.md
+drwxrwxr-x 2 ramakrishna_pudota ramakrishna_pudota 4096 Feb 12 02:58 ws3
+drwxrwxr-x 2 ramakrishna_pudota ramakrishna_pudota 4096 Feb 12 18:37 ws2
+drwxrwxr-x 4 ramakrishna_pudota ramakrishna_pudota 4096 Feb 17 19:40 sample1
+drwxrwxr-x 2 ramakrishna_pudota ramakrishna_pudota 4096 Feb 19 02:35 a1
+
+
+Task 1b) Alias 'w' used in CS131 directory for displaying the number of files in the current directory as a short name.
+
+Output:
+
+      6      47     383
+
+
+Task 2a) Created the FARE directory in a1 directory.
+         
+
+Task 2b) Extracted fare amounts for PUlocationID=1.0, DOlocationID=264.0
+         File Location: CS131/a1/FARE/1.0-264.0.txt
+
+         Extracted fare amounts for PUlocationID=10.0, DOlocationID=114.0
+         File Location: CS131/a1/FARE/10.0-114.0.txt
+
+
+Task 2c) Mean Fare for PUlocationID=1.0, DOlocationID=264.0
+
+Output:
+
+42.50
+
+         Mean Fare for PUlocationID=10.0, DOlocationID=114.0
+
+Output:
+
+51.82
+
+
+Task 2d) Highest total amount paid on January 10, 2019
+
+Output:
+
+36090.3    (This must be an anomaly because when I searched for the row that contained the number, the passenger count was 0.0 and the pickup and drop-off location ids were the same)
+
+
+Task 2e) 10 Most popular dropoff locations for rides with 3+ passengers (in descending order)
+The output is in the format - (no. of rides) (dropoff location ID)
+
+Output:
+
+  19897 236.0
+  18013 161.0
+  16686 237.0
+  16556 230.0
+  14324 170.0
+  13964 48.0
+  13902 162.0
+  13472 142.0
+  12852 239.0
+  12194 141.0
+
+
+
+------------ END ------------
