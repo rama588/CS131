@@ -21,11 +21,11 @@
 findsort \<directory> \<option> \<value>
 
 **Options:**  
-  --search \<name>    Find files by name.  
-  --type \<ext>       Find files by extension.  
-  --content \<text>   Find files containing text.  
-  --sort             Categorize files into folders.  
-  --help             Show this message.
+  --search \<name>                 Find files by name.  
+  --type \<ext>                    Find files by extension.  
+  --content \<text>                Find files containing text.  
+  --sort                           Categorize files into folders.  
+  --help                           Show this message.
 
 ### **Examples** 
 
@@ -60,7 +60,8 @@ Searching for 'vendor' inside files in /home/ramakrishna\_pudota/CS131...
 /home/ramakrishna\_pudota/CS131/ws2/ws2.txt
 
 
-\4. Organize files - 
+\4. Organize files -
+  
 ramakrishna\_pudota@instance-20250203-032935:~/CS131/a2$ ./findsort.sh ~/CS131/sample1 --sort  
 Sorting files in /home/ramakrishna\_pudota/CS131/sample1...  
 Scripts: sh files found.  
