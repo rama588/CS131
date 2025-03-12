@@ -20,19 +20,23 @@
 ### **Basic Syntax**  
 findsort \<directory> \<option> \<value>
 
-Options:
+**Options:**  
   --search \<name>    Find files by name.  
   --type \<ext>       Find files by extension.  
   --content \<text>   Find files containing text.  
   --sort             Categorize files into folders.  
   --help             Show this message.
 
-## **Examples** 
+### **Examples** 
+
+\1. Search for files by name -  
 
 ramakrishna\_pudota@instance-20250203-032935:~/CS131/a2$ ./findsort.sh ~/CS131 --search 2019  
 Searching for '2019' in /home/ramakrishna\_pudota/CS131...  
 /home/ramakrishna\_pudota/CS131/2019-01-h1.csv
 
+
+\2. Search for files by type -  
 
 ramakrishna\_pudota@instance-20250203-032935:~/CS131/a2$ ./findsort.sh ~/CS131 --type csv  
 Searching for .csv files in /home/ramakrishna\_pudota/CS131...  
@@ -44,6 +48,8 @@ Searching for .csv files in /home/ramakrishna\_pudota/CS131...
 /home/ramakrishna\_pudota/CS131/sample1/ws3csvs/jan10\_data.csv  
 
 
+\3. Search for files by content -  
+
 ramakrishna\_pudota@instance-20250203-032935:~/CS131/a2$ ./findsort.sh ~/CS131 --content "vendor"  
 Searching for 'vendor' inside files in /home/ramakrishna\_pudota/CS131...  
 /home/ramakrishna\_pudota/CS131/ws4/2025-03-07-02:26:06-2.0.csv  
@@ -54,6 +60,7 @@ Searching for 'vendor' inside files in /home/ramakrishna\_pudota/CS131...
 /home/ramakrishna\_pudota/CS131/ws2/ws2.txt
 
 
+\4. Organize files - 
 ramakrishna\_pudota@instance-20250203-032935:~/CS131/a2$ ./findsort.sh ~/CS131/sample1 --sort  
 Sorting files in /home/ramakrishna\_pudota/CS131/sample1...  
 Scripts: sh files found.  
