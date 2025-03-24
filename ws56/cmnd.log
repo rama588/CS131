@@ -1,0 +1,23 @@
+Commands used in WS56 Assignment:
+
+TASK 1.1:
+  696  sed -n '/^2\.0,/p' 2019-01-h1.csv > ws56/vendor2.csv
+  697  wc ws56/vendor2.csv >> ws56/ws56.txt
+
+TASK 1.2:
+  699  sed 's/[:\"-]//g' 2019-01-h1.csv > ws56/no-separators.csv
+  704  head -10 ws56/no-separators.csv >> ws56/ws56.txt
+
+TASK 1.3:
+  706  sed -E 's/([0-9]+)\.[0-9]+/\1/g' ws56/no-separators.csv > ws56/no-fractions.csv
+  711  head -10 ws56/no-fractions.csv >> ws56/ws56.txt
+
+TASK 2.1:
+  717  awk -F',' '$17 >= 10 { tips[$14]++ } END { for (t in tips) print t, tips[t] }' 2019-01-h1.csv >> ws56/ws56.txt
+
+TASK 2.2:
+  722  awk -F',' '{ tips[$14]++ } END { for (t in tips) print t, tips[t] }' 2019-01-h1.csv | sort -k2 -nr | head -20 >> ws56/ws56.txt
+  
+
+
+------------------- END --------------------
