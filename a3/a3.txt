@@ -1,0 +1,49 @@
+ASSIGNMENT 3
+
+#TASK 1
+#Each student's total score is calculated and stored in the associative array total_scores[]
+
+#TASK 2
+#A user-defined function (calc_avg) is used to compute the average score. Based on the average, students are classified as "Pass" (avg ≥ 70) or "Fail". Results are stored in avg_scores[] and pass_status[] associative arrays.
+
+#TASK 3
+#The script keeps track of the highest and lowest total scores using two variables: max_total and min_total. The corresponding student names are stored in top_stu and bot_stu.
+
+#TASK 4
+#Each block includes the student's name, total score, rounded average score, and if they failed or passed. Student order below is based on how awk iterates over the associative array.
+
+Student Grade Report -       
+
+Name: David
+Total: 195
+Average: 65
+Status: Fail
+
+Name: Eve
+Total: 265
+Average: 88.33
+Status: Pass
+
+Name: Bob
+Total: 246
+Average: 82
+Status: Pass
+
+Name: Charlie
+Total: 270
+Average: 90
+Status: Pass
+
+Name: Alice
+Total: 253
+Average: 84.33
+Status: Pass
+
+#TASK 5
+Top and Bottom Performers -
+
+Top Scorer: Charlie (Total: 270)
+Lowest Scorer: David (Total: 195)
+
+# Charlie has the highest total score among all students.
+# David has the lowest total score among all students.

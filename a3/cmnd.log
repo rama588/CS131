@@ -1,0 +1,14 @@
+Commands Used for A3:
+
+  770  cd CS131/
+  771  mkdir a3
+  772  cd a3
+  773  vim grades.csv
+  774  cat grades.csv 
+  775  vim grader.awk
+  776  awk -f grader.awk grades.csv 
+  787  vim grader.awk
+  788  awk -f grader.awk grades.csv 
+  789  awk -f grader.awk grades.csv > a3.txt
+  790  vim a3.txt
+  792  history | tail -30 > cmnd.log
