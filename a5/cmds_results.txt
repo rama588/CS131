@@ -1,0 +1,63 @@
+Assignment 5 - Classifying COVID-19 Severity Using Composite Health Indicators Across Demographics
+Group 10 - Anthony Flores & Rama Krishna Pudota
+
+First, we downloaded the Global Health Statistics dataset from Kaggle.
+Link: https://www.kaggle.com/datasets/malaiarasugraj/global-health-statistics
+
+Then, we used a sed command to get only rows with the disease name COVID-19,
+    sed -n '1p;/,COVID-19,/p' "Global Health Statistics.csv" > covid_only.csv
+
+This covid_only.csv was copied to my project folder in the D drive.
+    cp ~/global-health-statistics/covid_only.csv "/mnt/d/Projects/Global Health/"
+
+Then we made a python script to create the severity label using 4 health indicators - mortality rate, prevalence rate, incidence rate and healthcare access.
+    We ran this create_severity_label_with_demographics.py script in VSCode.
+    We got the severity_labeled_with_demographics.csv as a result.
+
+We then copied this resulting severity_labeled_with_demographics.py file to the global-health-statistics directory in the home directory of my WSL Ubuntu.
+    cp "/mnt/d/Projects/Global Health/severity_labeled_with_demographics.csv" ~/global-health-statistics/
+
+We then created the severity_classifier_stratified.py script in the spark-scripts directory in my WSL Ubuntu for building the model and evaluating it using Spark MLlib.
+    docker run -it   -v ~/spark-scripts:/scripts   -v ~/global-health-statistics:/data --user root   apache/spark-py   /bin/bash            #Running the docker container.
+    apt update && apt install -y python3 python3-pip      #Installing necessary dependencies in teh container
+    pip3 install numpy         #Installing necessary dependencies in teh container
+    apt install -y vim         #Installing necessary dependencies in teh container
+    export PYSPARK_PYTHON=python3           #Setting the environment variables
+    export PYSPARK_DRIVER_PYTHON=python3          #Setting the environment variables
+    cd /scripts/ 
+    /opt/spark/bin/spark-submit severity_classifier_stratified.py    #Running the script
+
+    After running the pyspark script, we got these results:
+        Model Accuracy: 0.9069
+        
+        Confusion Matrix:
+        +-----+----------+-----+
+         |label|prediction|count|
+        +-----+----------+-----+
+        | 0| 0.0| 6692|
+        | 0| 1.0| 733|
+        | 1| 0.0| 184|
+        | 1| 1.0| 2244|
+        +-----+----------+-----+
+
+        Feature Importances:
+        Healthcare Access (%): 0.2831
+        Incidence Rate (%): 0.2460
+        Prevalence Rate (%): 0.2375
+        Mortality Rate (%): 0.2302
+        Urbanization Rate (%): 0.0007
+        Per Capita Income (USD): 0.0006
+        Doctors per 1000: 0.0006
+        Education Index: 0.0006
+        Hospital Beds per 1000: 0.0004
+        Gender_vec: 0.0001
+        Age Group_vec: 0.0000
+
+Next, we created a script called visualizations.py for making visualizations.
+    We ran the script in VSCode and got the resulting images -
+        prevalence_by_severity_violin_hue.png
+        hexbin_mortality_vs_access_by_severity.png
+
+#All the csv files generated or used will be in the files folder.
+#All the scripts will be in the scripts folder.
+#All the generated visualizations will be in the plots folder.
